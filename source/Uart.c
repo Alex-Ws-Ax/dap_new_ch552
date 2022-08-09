@@ -26,7 +26,7 @@ void UART_Setup(void)
 //	P3_MOD_OC|=0x03;
 //	P3_DIR_PU|=0x03;
 	
-            //使用Timer1作为波特率发生器	
+  //使用Timer1作为波特率发生器	
   RCLK = 0; //UART0接收时钟
   TCLK = 0; //UART0发送时钟
   PCON |= SMOD;
