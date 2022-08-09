@@ -52,7 +52,7 @@ SWD_Read_Bits:
 ;R7 = Count
 	RSEG  ?PR?_SWJ_Sequence?SW_DP_ASM
 _SWJ_Sequence:
-;	MOV		P2,R2
+	MOV		P2,R2
 SWJ_Next_Byte:
 	MOV		A,R7
 	CLR		C

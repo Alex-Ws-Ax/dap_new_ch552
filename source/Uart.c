@@ -39,8 +39,8 @@ void UART_Setup(void)
 	SCON = 0x50;//串口0使用模式1    TI = 1;    REN = 1;       
 	ES = 1;	
 #elif	USE_UART1 == 1	
-//	P1_MOD_OC|=0xC0;//开漏
-//	P1_DIR_PU|=0xC0;//使能输出上拉电阻
+	P1_MOD_OC &= ~(0xC0);
+	P1_DIR_PU &= ~(0xC0);
   U1SM0 = 0;                                                                   //UART1选择8位数据位
   U1SMOD = 1;                                                                  //快速模式
   U1REN = 1;                                                                   //使能接收
